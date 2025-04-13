@@ -1,0 +1,68 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.content {
+    padding-top: 18vh;
+}
+
+/* Glow effect for logo and text */
+h1 {
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+    animation: pulse-glow 3s infinite ease-in-out;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    text-shadow: 0 0 3px #ffffff;
+    margin-bottom: 25px;
+}
+
+.logo {
+    width: 140px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 6px #ffffff);
+}
+
+/* Button with glass blur effect */
+.cta-button {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 12px 28px;
+    font-size: 1em;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 0 8px #ffffff33;
+}
+
+.cta-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 12px #ffffff99, 0 0 18px #ffffff88;
+    transform: scale(1.05);
+}
+
+/* Glow pulse animation */
+@keyframes pulse-glow {
+    0%, 100% {
+        text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+    }
+    50% {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+    }
+}
