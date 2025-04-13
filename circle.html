@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join the Circle</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            background: white;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>YOU'RE IN THE CIRCLE</h1>
+    <p>The next KHARRISMA event is coming. Fill out the form below and join the experience.</p>
+    
+    <form onsubmit="submitForm(event)">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Email address" required>
+        <input type="text" name="instagram" placeholder="Instagram (optional)">
+        <textarea name="message" rows="4" placeholder="Message (optional)"></textarea>
+        <input type="submit" value="SUBMIT TO THE CIRCLE" class="submit-btn">
+    </form>
+
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+            alert("Thank you! You'll hear from us soon.");
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
